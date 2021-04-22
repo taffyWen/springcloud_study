@@ -31,7 +31,7 @@
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
         <git.commit.plugin>2.2.5</git.commit.plugin>
-        <jjwt-version>0.10.7</jjwt-version>
+        <jjwt-version>0.11.2</jjwt-version>
         <apache.poi-version>4.1.0</apache.poi-version>
         <redisson-spring-boot-starter.version>3.14.1</redisson-spring-boot-starter.version>
         <ob.version>1.1.7</ob.version>
@@ -83,11 +83,13 @@
 
 
             <!-- JWT -->
-            <dependency>
+<!--            <dependency>
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt-api</artifactId>
                 <version>${jjwt-version}</version>
+                <scope>runtime</scope>
             </dependency>
+
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt-impl</artifactId>
@@ -99,7 +101,7 @@
                 <artifactId>jjwt-jackson</artifactId>
                 <version>${jjwt-version}</version>
                 <scope>runtime</scope>
-            </dependency>
+            </dependency>-->
 
             <dependency>
                 <groupId>org.apache.poi</groupId>
@@ -113,40 +115,12 @@
             </dependency>
 
             <dependency>
-                <groupId>com.cntaiping.tpi</groupId>
-                <artifactId>base-common-tool</artifactId>
-                <version>${taipayment-base}</version>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.75</version>
             </dependency>
-            <dependency>
-                <groupId>com.cntaiping.tpi</groupId>
-                <artifactId>base-common-redis</artifactId>
-                <version>${taipayment-base}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.cntaiping.tpi</groupId>
-                <artifactId>base-common-mybatis</artifactId>
-                <version>${taipayment-base}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.cntaiping.tpi</groupId>
-                <artifactId>base-common-swagger</artifactId>
-                <version>${taipayment-base}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.cntaiping.tpi</groupId>
-                <artifactId>base-common-auth</artifactId>
-                <version>${taipayment-base}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.cntaiping.tpi</groupId>
-                <artifactId>base-common-job</artifactId>
-                <version>${taipayment-base}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.cntaiping.tpi</groupId>
-                <artifactId>base-common-idempotent</artifactId>
-                <version>${taipayment-base}</version>
-            </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 
@@ -266,6 +240,13 @@
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-transport-simple-http</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>4.5.11</version>
+        </dependency>
+
 
     </dependencies>
 

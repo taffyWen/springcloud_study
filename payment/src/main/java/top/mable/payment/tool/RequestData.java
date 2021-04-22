@@ -11,7 +11,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class RequestData<T> implements Serializable {
 
-    private String id;
+    private String reqId;
 
     private T data;
 }

@@ -5,7 +5,7 @@ public enum ExceptionEnum {
 
 
 
-    IS_NULL("P0001","{0}为空，异常")
+    IS_NULL("P0001","{0}的name为空，异常")
     ;
 
 

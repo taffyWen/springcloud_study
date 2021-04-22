@@ -1,11 +1,10 @@
 package top.mable.payment.common.exception;
 
-import com.sun.tools.javac.util.ArrayUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import top.mable.payment.common.Result;
+import top.mable.payment.tool.Result;
 
 import java.lang.reflect.InvocationTargetException;
 import java.text.MessageFormat;
