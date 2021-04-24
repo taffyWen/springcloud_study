@@ -1,4 +1,4 @@
-package top.mable.payment.tool.vo;
+package top.mable.payment.tool;
 
 import lombok.Data;
 

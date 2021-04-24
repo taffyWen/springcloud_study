@@ -8,11 +8,12 @@ import top.mable.payment.tool.Result;
 import top.mable.payment.common.exception.BusinessException;
 import top.mable.payment.tool.ExceptionEnum;
 import top.mable.payment.tool.RequestData;
-import top.mable.payment.tool.vo.RequestExceptionDTO;
+import top.mable.payment.tool.RequestExceptionDTO;
 
 @RestController
 @RequestMapping("/demo")
 public class DemoController {
+
 
 
     @RequestMapping("/exception")
@@ -23,4 +24,6 @@ public class DemoController {
         }
         return Result.success(requestExceptionDTO);
     }
+
+
 }
