@@ -65,7 +65,8 @@ public class SystemLogAspect {
                 String name = enums.nextElement();
                 log.info("name:{},value:{}", name, request.getParameter(name));
             }
-            log.info("body: {}", JSONUtil.parse(joinPoint.getArgs()));
+            // 打印出入参
+            log.info("body: {}", JSONUtil.toJsonStr(joinPoint.getArgs()));
 
             if (joinPoint.getArgs().length > 0 && joinPoint.getArgs()[0] instanceof RequestData) {
                 request.setAttribute(Constant.TRACE_ID, ((RequestData) joinPoint.getArgs()[0]).getReqId());
