@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import top.mable.payment.annotation.SystemServiceLog;
 import top.mable.payment.service.GpPayFeeInfoService;
 import top.mable.payment.tool.Result;
 import top.mable.payment.tool.vo.GpPayFeeInfoDTO;
@@ -26,6 +27,7 @@ public class GpPayFeeInfoController {
         return Result.success(list);
     }
 
+    @SystemServiceLog
     @RequestMapping("/getOne")
     public Result getOne(@RequestBody GpPayFeeInfoDTO gpPayFeeInfoDTO){
         QueryWrapper wrapper = new QueryWrapper<GpPayFeeInfoDTO>();
