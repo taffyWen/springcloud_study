@@ -47,6 +47,8 @@
         </dependency>
 
         <!-- SpringCloud Ailibaba Nacos Config -->
+        <!--sh startup.sh -m standalone   moaos
+        startup.cmd -m standalone   window-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
