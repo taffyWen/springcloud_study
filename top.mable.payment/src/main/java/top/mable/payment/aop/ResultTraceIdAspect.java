@@ -21,6 +21,16 @@ public class ResultTraceIdAspect implements ResponseBodyAdvice {
         return returnType.getMethod().getReturnType().equals(Result.class);
     }
 
+    /**
+     * 再返回出参的body中设置traceid ，前提是在请求的时候，先截取后塞入 HttpServletRequest 中
+     * @param body
+     * @param returnType
+     * @param selectedContentType
+     * @param selectedConverterType
+     * @param request
+     * @param response
+     * @return
+     */
     @Override
     public Object beforeBodyWrite(Object body, MethodParameter returnType,
                                   MediaType selectedContentType, Class selectedConverterType,

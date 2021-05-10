@@ -48,7 +48,7 @@ public class SystemLogAspect {
     }
     /**
      * 前置通知 用于拦截Controller层记录用户的操作
-     *
+     * 出参中塞入taceId
      * @param joinPoint 切点
      */
     @Before("controllerAspect()")
